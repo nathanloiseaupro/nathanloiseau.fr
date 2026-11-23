@@ -1,0 +1,44 @@
+<!doctype html>
+<html lang="fr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex, nofollow, noarchive">
+<meta name="googlebot" content="noindex, nofollow">
+<title>Garage Brenac, application client</title>
+<script>
+  // Sur un téléphone, l'application s'ouvre en plein écran.
+  if (window.matchMedia("(max-width: 600px)").matches) location.replace("application.html" + location.hash);
+</script>
+<link rel="preload" href="fonts/red-hat-text-latin-400-normal.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="fonts/red-hat-display-latin-600-normal.woff2" as="font" type="font/woff2" crossorigin>
+<style>
+  @font-face { font-family: "Red Hat Text"; src: url(fonts/red-hat-text-latin-400-normal.woff2) format("woff2"); font-weight: 400; font-display: swap; }
+  @font-face { font-family: "Red Hat Display"; src: url(fonts/red-hat-display-latin-600-normal.woff2) format("woff2"); font-weight: 600; font-display: swap; }
+  :root { --vert: oklch(0.36 0.07 163); --vert-2: oklch(0.31 0.06 163); --clair: oklch(0.97 0.01 150); --clair-2: oklch(0.84 0.04 160); }
+  * { box-sizing: border-box; }
+  html, body { margin: 0; height: 100%; }
+  body { background: var(--vert); color: var(--clair); font-family: "Red Hat Text", system-ui, sans-serif; display: grid; grid-template-columns: minmax(0, 440px) auto; justify-content: center; gap: clamp(40px, 8vw, 128px); align-items: center; padding: 32px clamp(24px, 6vw, 96px); min-height: 100vh; }
+  .texte { max-width: 440px; }
+  .logo { display: flex; align-items: center; gap: 14px; margin-bottom: 28px; }
+  .logo span:first-child { width: 48px; height: 48px; border-radius: 12px; background: var(--clair); color: var(--vert); display: grid; place-items: center; font: 600 26px "Red Hat Display", sans-serif; }
+  .logo strong { display: block; font: 600 24px/1.1 "Red Hat Display", sans-serif; }
+  .logo small { font-size: 15px; color: var(--clair-2); }
+  p { font-size: 17px; line-height: 1.6; color: var(--clair-2); margin: 0 0 14px; }
+  a { color: var(--clair); text-underline-offset: 3px; }
+  .cadre { width: 410px; height: 864px; max-height: calc(100vh - 64px); aspect-ratio: 410 / 864; border-radius: 54px; padding: 10px; background: oklch(0.18 0.02 163); box-shadow: 0 40px 80px -40px oklch(0.1 0.03 163 / 0.8); }
+  .cadre iframe { width: 100%; height: 100%; border: 0; border-radius: 44px; background: #f6f4ee; display: block; }
+  @media (max-height: 900px) { .cadre { height: calc(100vh - 64px); width: auto; } }
+  @media (max-width: 860px) { body { grid-template-columns: 1fr; justify-items: center; } .texte { justify-self: center; } }
+</style>
+</head>
+<body>
+  <div class="texte">
+    <div class="logo"><span aria-hidden="true">B</span><span><strong>Garage Brenac</strong><small>Application client pour iPhone</small></span></div>
+    <p>Concept d’application pour les clients d’un garage. Essayez-la dans le téléphone&nbsp;: prenez un rendez-vous, puis ouvrez l’onglet Suivi pour accepter la réparation.</p>
+    <p>Le garage, le client et les données sont inventés.</p>
+    <p><a href="application.html">Ouvrir l’application en plein écran</a></p>
+  </div>
+  <div class="cadre"><iframe src="application.html" title="Application Garage Brenac"></iframe></div>
+</body>
+</html>

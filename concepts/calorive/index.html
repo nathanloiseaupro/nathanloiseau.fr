@@ -1,0 +1,67 @@
+<!doctype html>
+<html lang="fr">
+<head>
+<meta charset="utf-8">
+<meta name="robots" content="noindex, nofollow, noarchive">
+<meta name="googlebot" content="noindex, nofollow">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Calorive · Interventions</title>
+<meta name="description" content="Planning, interventions et rapports de l’agence Calorive Maintenance de Villeurbanne.">
+<link rel="preload" href="fonts/libre-franklin-400.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="fonts/libre-franklin-500.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='7' fill='%23245d74'/%3E%3Cpath d='M21 11.2a7 7 0 1 0 0 9.6' fill='none' stroke='%23f4f1ea' stroke-width='3' stroke-linecap='round'/%3E%3C/svg%3E">
+<link rel="stylesheet" href="styles.css">
+</head>
+<body>
+<a class="evitement" href="#vue">Aller au contenu</a>
+<div class="app">
+  <aside class="nav" aria-label="Navigation principale">
+    <div class="marque">
+      <svg class="marque-logo" viewBox="0 0 32 32" aria-hidden="true"><rect width="32" height="32" rx="7"/><path d="M21 11.2a7 7 0 1 0 0 9.6"/></svg>
+      <div>
+        <div class="marque-nom">Calorive</div>
+        <div class="marque-agence">Agence de Villeurbanne</div>
+      </div>
+    </div>
+    <button class="recherche-ouvrir" type="button" data-action="palette">
+      <svg viewBox="0 0 16 16" aria-hidden="true"><circle cx="7" cy="7" r="4.5"/><path d="m10.5 10.5 3 3"/></svg>
+      <span>Rechercher</span>
+      <kbd class="touche-mod">⌘K</kbd>
+    </button>
+    <nav class="nav-liens">
+      <a href="#/aujourdhui" data-route="aujourdhui">
+        <svg viewBox="0 0 16 16" aria-hidden="true"><rect x="2.5" y="3.5" width="11" height="10" rx="1.5"/><path d="M2.5 6.5h11M5.5 2v3M10.5 2v3"/></svg>
+        <span>Aujourd’hui</span><span class="compte" data-compte="aplacer"></span>
+      </a>
+      <a href="#/interventions" data-route="interventions">
+        <svg viewBox="0 0 16 16" aria-hidden="true"><path d="M3 4h10M3 8h10M3 12h6"/></svg>
+        <span>Interventions</span>
+      </a>
+      <a href="#/statistiques" data-route="statistiques">
+        <svg viewBox="0 0 16 16" aria-hidden="true"><path d="M3 13V8M8 13V3M13 13v-3"/></svg>
+        <span>Statistiques</span>
+      </a>
+    </nav>
+    <div class="nav-bas">
+      <button class="lien-discret" type="button" data-action="raccourcis">Raccourcis clavier <kbd>?</kbd></button>
+      <div class="utilisatrice">
+        <span class="avatar">LM</span>
+        <div><div class="u-nom">Lucie Marchand</div><div class="u-role">Planification</div></div>
+      </div>
+    </div>
+  </aside>
+  <main id="vue" tabindex="-1"></main>
+</div>
+<nav class="onglets-bas" aria-label="Navigation">
+  <a href="#/aujourdhui" data-route="aujourdhui"><svg viewBox="0 0 16 16" aria-hidden="true"><rect x="2.5" y="3.5" width="11" height="10" rx="1.5"/><path d="M2.5 6.5h11M5.5 2v3M10.5 2v3"/></svg>Aujourd’hui</a>
+  <a href="#/interventions" data-route="interventions"><svg viewBox="0 0 16 16" aria-hidden="true"><path d="M3 4h10M3 8h10M3 12h6"/></svg>Interventions</a>
+  <a href="#/statistiques" data-route="statistiques"><svg viewBox="0 0 16 16" aria-hidden="true"><path d="M3 13V8M8 13V3M13 13v-3"/></svg>Statistiques</a>
+  <button type="button" data-action="palette"><svg viewBox="0 0 16 16" aria-hidden="true"><circle cx="7" cy="7" r="4.5"/><path d="m10.5 10.5 3 3"/></svg>Rechercher</button>
+</nav>
+<div id="palette" class="palette" hidden></div>
+<div id="messages" class="messages" aria-live="polite"></div>
+<div id="infobulle" class="infobulle" role="status" hidden></div>
+<script src="data.js"></script>
+<script src="app.js"></script>
+</body>
+</html>
