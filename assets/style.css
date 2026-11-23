@@ -420,3 +420,14 @@ h3 { font-weight: 400; font-size: 1.2rem; letter-spacing: 0; }
 .prix-appel dd { font-size: 1.3rem; }
 @media (max-width: 1080px) { .ouverture-in { grid-template-columns: 1fr; } }
 @media (max-width: 720px) { .prix-appel { grid-template-columns: 1fr; } .composition { padding-bottom: 16%; } .prix-appel dd { font-size: 1.1rem; } }
+
+/* Partance (23/11/2026) : section de l'accueil et page du projet */
+.partance { border-bottom: 1px solid var(--filet); }
+.page-projet .ecran { margin: 28px 0 0; }
+.page-projet .ecran-media { cursor: default; }
+.page-projet .ecran-media img { display: block; width: 100%; height: 100%; object-fit: cover; object-position: top center; }
+.page-projet .ecran-media video { cursor: pointer; }
+.page-projet .paire { margin-top: 28px; }
+.page-projet .paire .ecran { margin-top: 0; }
+.telephones { display: flex; flex-wrap: wrap; gap: clamp(16px, 3vw, 32px); margin-top: 28px; }
+.telephones img { width: min(280px, calc(50% - 16px)); height: auto; border: 1px solid var(--filet); }
